@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Successful</title>
+    <style>
+        /* Set the body to fill the page */
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('/images/background.png');
+            background-size: cover;
+            /* Ensure the background covers the full viewport */
+            background-position: center center;
+            color: #d9d9d9;
+            display: flex;
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            text-align: center;
+            flex-direction: column;
+            /* Stack items vertically */
+        }
+
+        /* Container for the content to add some overlay effect */
+        .overlay {
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Logo style */
+        .logo {
+            max-width: 80%;
+            margin-bottom: 15px;
+        }
+
+        /* Adjust the title */
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        /* Adjust the description text */
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <!-- Logo Image -->
+        <img src="/images/logo.png" alt="Logo" class="logo">
+        <h1>Great News</h1>
+        <p>You're all signed up to receive updates from us. Check your e-mail for a confirmation!</p>
+      </div>
+</body>
+
+</html>
