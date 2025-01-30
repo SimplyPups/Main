@@ -12,28 +12,24 @@
   <link rel="stylesheet" href="/email-form.css"> <!-- Link to the new CSS file -->
   <title>Welcome</title>
   <style>
-    /* Set the body to fill the page */
+    /* Default styles for body and html */
     body,
     html {
       height: 100%;
-      margin: 0;
       font-family: Arial, sans-serif;
       background-image: url('/images/background.png');
       background-size: cover;
-      /* Ensure the background covers the full viewport */
       background-position: center center;
+      background-attachment: fixed;
       color: #d9d9d9;
       display: flex;
       justify-content: center;
-      /* Center horizontally */
       align-items: center;
-      /* Center vertically */
       text-align: center;
       flex-direction: column;
-      /* Stack items vertically */
     }
 
-    /* Container for the content to add some overlay effect */
+    /* Overlay styles */
     .overlay {
       margin-top: 20px;
       background-color: rgba(0, 0, 0, 0.6);
@@ -46,26 +42,89 @@
       align-items: center;
       z-index: 2;
       position: relative;
+      box-sizing: content-box;
     }
 
     /* Logo style */
     .logo {
-      max-width: 300px;
+      max-width: 80%;
       margin-bottom: 15px;
     }
 
-    /* Adjust the title */
+    /* Title and text styles */
     h1 {
       font-size: 3em;
       margin: 0;
       font-weight: bold;
     }
 
-    /* Adjust the description text */
     p {
       font-size: 1.2em;
       margin-top: 10px;
     }
+
+    /* Media queries for responsiveness */
+
+    /* Tablets and smaller devices (portrait and landscape) */
+    @media (max-width: 768px) {
+      .overlay {
+        max-width: 90%;
+        padding: 15px;
+      }
+
+      .logo {
+        max-width: 70%;
+      }
+
+      h1 {
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.1em;
+      }
+    }
+
+    /* Small screens (e.g., smartphones in portrait mode) */
+    @media (max-width: 480px) {
+      .overlay {
+        max-width: 95%;
+        padding: 10px;
+      }
+
+      .logo {
+        max-width: 60%;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+    }
+
+    /* Larger screens (desktops and tablets in landscape mode) */
+    @media (min-width: 1024px) {
+      .overlay {
+        max-width: 70%;
+        padding: 30px;
+      }
+
+      .logo {
+        max-width: 300px;
+      }
+
+      h1 {
+        font-size: 3.5em;
+      }
+
+      p {
+        font-size: 1.3em;
+      }
+    }
+
   </style>
 </head>
 
@@ -73,55 +132,9 @@
   <div class="overlay">
     <!-- Logo Image -->
     <img src="/images/logo.png" alt="Logo" class="logo">
-    <p>You've arrived a bit early but we're working hard to get ready for you...</p>
+    <h1>What is that?</h1>
+    <p>Your entry was invalid, please enter a valid e-mail address...</p>
   </div>
-
-  <div class="dog-container">
-    <div class="dog">
-      <div class="dog-body">
-        <div class="dog-tail">
-          <div class="dog-tail">
-            <div class="dog-tail">
-              <div class="dog-tail">
-                <div class="dog-tail">
-                  <div class="dog-tail">
-                    <div class="dog-tail">
-                      <div class="dog-tail">
-                        <div class="dog-tail"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="dog-torso"></div>
-      <div class="dog-head">
-        <div class="dog-ears">
-          <div class="dog-ear"></div>
-          <div class="dog-ear"></div>
-        </div>
-        <div class="dog-eyes">
-          <div class="dog-eye"></div>
-          <div class="dog-eye"></div>
-        </div>
-        <div class="dog-muzzle">
-          <div class="dog-tongue"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <form id="emailForm" method="POST" action="/submit">
-    <label for="email" style="font-variant-caps: small-caps;">Get Notified When We Open</label>
-    <input type="email" id="email" name="email" placeholder="Enter E-Mail Address" required>
-    <button type="submit">Submit</button>
-  </form>
-
-  <footer>
-    <p style="font-size: 0.75rem;">Website by @Eric Bramble</p>    
-  </footer>
 </body>
 
 </html>
