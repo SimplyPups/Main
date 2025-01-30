@@ -5,13 +5,13 @@
     user-select: none;
   }
   
-  /* Generic */
-  body {
-    width: 100%;
-    height: 100vh;
+/* Container for centering everything */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    width: 100%;
     background-color: #FDFBFD;
   }
   
