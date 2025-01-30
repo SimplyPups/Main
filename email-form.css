@@ -29,6 +29,12 @@
     border-color: #FFB300; /* Slightly lighter yellow on focus */
   }
   
+  /* Placeholder text styling */
+  #emailForm input::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Faded grey color */
+  }
+  
+  /* Button styling */
   #emailForm button {
     font-size: 1em;
     padding: 10px 20px;
